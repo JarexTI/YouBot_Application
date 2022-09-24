@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- SSH -->
+    <!-- Текст ssh подключение -->
+    <TextView
+        android:id="@+id/resultTextSsh"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/ssh_string"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Текст ip -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/ip_string"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextSsh" />
+
+    <!-- Поле ввода IP -->
+    <EditText
+        android:id="@+id/inputIpSsh"
+        android:layout_width="117dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/ip_hint_string"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextSsh" />
+
+    <!-- Текст username -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/username_string"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/inputIpSsh"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextSsh" />
+
+    <!-- Поле ввода username -->
+    <EditText
+        android:id="@+id/inputUsernameSsh"
+        android:layout_width="83dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/username_hint_string"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextSsh" />
+
+    <!-- Текст password -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/password_string"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputIpSsh" />
+
+    <!-- Поле ввода password -->
+    <EditText
+        android:id="@+id/inputPasswordSsh"
+        android:layout_width="70dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/password_hint_string"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/inputIpSsh"
+        tools:ignore="TextFields" />
+
+    <!-- Кнопка подключения по SSH -->
+    <Button
+        android:id="@+id/button_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/button_connect_string"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPasswordSsh" />
+
+    <!-- Кнопка отключения по SSH -->
+    <Button
+        android:id="@+id/button_disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/button_disconnect_string"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPasswordSsh" />
+
+    <!-- Кнопка запуска rosLaunch -->
+    <Button
+        android:id="@+id/button_rosLaunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/button_ros_launch"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_connect" />
+
+    <!-- кнопка для закрытия rosLaunch -->
+    <Button
+        android:id="@+id/button_close_rosLaunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/button_close_ros_launch"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_disconnect" />
+
+    <!-- TCP -->
+    <!-- result TCP -->
+    <TextView
+        android:id="@+id/tcp_result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tcp_text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_rosLaunch" />
+
+    <!-- text ip TCP -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/ip_string"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcp_result_text" />
+
+    <!-- поле ввода ip TCP -->
+    <EditText
+        android:id="@+id/inputTCPip"
+        android:layout_width="130dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/ip_hint_string"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tcp_result_text" />
+
+    <!-- text port TCP -->
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/port_string"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/inputTCPip"
+        app:layout_constraintTop_toBottomOf="@+id/tcp_result_text" />
+
+    <!-- поле ввода port TCP -->
+    <EditText
+        android:id="@+id/inputPortTCP"
+        android:layout_width="63dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/port_hint_string"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/tcp_result_text" />
+
+    <!-- кнопка подключения TCP -->
+    <Button
+        android:id="@+id/button_connect_TCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/button_connect_tcp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTCPip" />
+
+    <!-- кнопка отключения TCP -->
+    <Button
+        android:id="@+id/button_disconnect_TCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/button_disconnect_tcp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTCPip" />
+
+    <!-- кнопка; переход на SecondActivity -->
+    <Button
+        android:id="@+id/button_second_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="startSecondActivity"
+        android:text="@string/button_second_activity"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/list_of_text_terminal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_disconnect_TCP" />
+
+    <!-- Текст "Терминал" -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/text_Terminal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/list_of_text_terminal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Terminal -->
+    <ListView
+        android:id="@+id/list_of_text_terminal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:stackFromBottom="true"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

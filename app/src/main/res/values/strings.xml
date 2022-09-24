@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">YouBot</string>
+    <!-- SSH -->
+    <string name="ssh_string">SSH подключение</string>
+    <string name="ip_string">IP</string>
+    <string name="ip_hint_string">127.0.0.0</string>
+    <string name="port_string">Port</string>
+    <string name="port_hint_string">7777</string>
+    <string name="username_string">Username</string>
+    <string name="username_hint_string">root</string>
+    <string name="password_string">Password</string>
+    <string name="password_hint_string">111111</string>
+    <string name="button_connect_string">Connect SSH</string>
+    <string name="button_disconnect_string">Disconnect SSH</string>
+    <!-- rosLaunch -->
+    <string name="button_ros_launch">rosLaunch</string>
+    <string name="button_close_ros_launch">Close rosLaunch</string>
+    <!-- TCP -->
+    <string name="tcp_text">TCP подключение</string>
+    <string name="button_connect_tcp">Connect TCP</string>
+    <string name="button_disconnect_tcp">Disconnect TCP</string>
+    <!-- Activity -->
+    <string name="button_second_activity">2 страница</string>
+    <string name="button_home_activity">1 стр</string>
+    <!-- Terminal -->
+    <string name="text_Terminal">Терминал:</string>
+
+    <!--SecondActivity-->
+    <string name="btn_video_on">Video ON</string>
+    <string name="btn_video_off">Video OFF</string>
+    <string name="text_manipulator_platform">Манипулятор и платформа</string>
+    <string name="text_id">id</string>
+    <string name="text_q1">q1</string>
+    <string name="text_q2">q2</string>
+    <string name="text_q3">q3</string>
+    <string name="text_q4">q4</string>
+    <string name="text_q5">q5</string>
+    <string name="text_send_command">send</string>
+    <string name="text_next_activity">3 стр</string>
+
+    <!--ThirdActivity-->
+    <string name="text_commands_manipulator">Команды манипулятора</string>
+    <string name="text_name_command">Название команды</string>
+    <string name="text_add_command">Add command</string>
+    <string name="text_back_activity">2 страница</string>
+    <string name="text_delete_command">delete command</string>
+
+
+</resources>
