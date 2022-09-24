@@ -10,7 +10,3 @@ The application consists of 3 pages:
 - The second page is responsible for displaying the video image from the robot's camera and manual control of the platform and manipulator. There is also a terminal displaying odometry data.
 
 - The third page is responsible for adding commands for the manipulator.
-
-Examples:
-![img1|250x450](Screenshot_2022-05-19-14-02-30-704_com.example.youbot.png)
-![img2|300x400](video_Moment.jpg)
